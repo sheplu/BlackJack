@@ -17,8 +17,7 @@ public class Game {
 		
 		do {
 			showMenu();
-			 choice = askChoice();
-			
+			choice = askChoice();
 			
 			switch (choice) {
 				case 1:
@@ -55,6 +54,8 @@ public class Game {
 			
 			Player player = new Player(name, money);
 			players.add(player);
+			
+			System.out.println("table ready? let's shuffle");
 		}
 		
 	}
