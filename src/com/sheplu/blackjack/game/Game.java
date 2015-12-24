@@ -1,18 +1,24 @@
 package com.sheplu.blackjack.game;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.sheplu.blackjack.player.Player;
 
 public class Game {
 	Scanner sc = new Scanner(System.in);
-	
+	int choice = 0;
+	ArrayList<Player> players = new ArrayList<Player>();
+			
 	public Game() {
 		System.out.println("initialize the game");
 		boolean isPlaying = true;
 		
+		
 		do {
 			showMenu();
-			int choice = askChoice();
-			System.out.println("Hello! How many players today?");
+			 choice = askChoice();
+			
 			
 			switch (choice) {
 				case 1:
@@ -37,6 +43,19 @@ public class Game {
 	}
 	
 	public void launcher() {
+		System.out.println("Hello! How many players today?");
+		choice = askChoice();
+		for(int i=0; i < choice; i++) {
+			System.out.println("player's informations");
+			System.out.println("money");
+			int money = sc.nextInt();
+			System.out.println("name");
+			String empty = sc.nextLine();
+			String name = sc.nextLine();
+			
+			Player player = new Player(name, money);
+			players.add(player);
+		}
 		
 	}
 	
@@ -48,7 +67,7 @@ public class Game {
 	}
 	
 	public int askChoice() {
-		int choice = sc.nextInt();
+		choice = sc.nextInt();
 		System.out.println(choice);
 		return choice;
 	}
