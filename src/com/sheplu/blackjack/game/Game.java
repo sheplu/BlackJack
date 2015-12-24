@@ -49,8 +49,8 @@ public class Game {
 			System.out.println("player's informations");
 			System.out.println("money");
 			int money = sc.nextInt();
-			System.out.println("name");
 			String empty = sc.nextLine();
+			System.out.println("name");
 			String name = sc.nextLine();
 			
 			Player player = new Player(name, money);
