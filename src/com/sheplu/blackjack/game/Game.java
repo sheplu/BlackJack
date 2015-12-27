@@ -53,10 +53,10 @@ public class Game {
 			String name = sc.nextLine();
 			
 			Player player = new Player(name, money);
-			players.add(player);
-			
-			System.out.println("table ready? let's shuffle");
+			players.add(player);	
 		}
+		
+		System.out.println("table ready? let's shuffle");
 		
 	}
 	
